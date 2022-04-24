@@ -178,10 +178,10 @@ rsvg_css_parse_raw_length (const char *str, gboolean * in,
     return length;
 }
 
-RsvgLength
+_RsvgLength
 _rsvg_css_parse_length (const char *str)
 {
-    RsvgLength out;
+    _RsvgLength out;
     gboolean percent, em, ex, in;
     RelativeSize relative_size = RELATIVE_SIZE_NORMAL;
     percent = em = ex = in = FALSE;
@@ -230,7 +230,7 @@ _rsvg_css_normalize_font_size (RsvgState * state, RsvgDrawingCtx * ctx)
 }
 
 double
-_rsvg_css_normalize_length (const RsvgLength * in, RsvgDrawingCtx * ctx, char dir)
+_rsvg_css_normalize_length (const _RsvgLength * in, RsvgDrawingCtx * ctx, char dir)
 {
     if (in->factor == '\0')
         return in->length;
@@ -286,7 +286,7 @@ _rsvg_css_accumulate_baseline_shift (RsvgState * state, RsvgDrawingCtx * ctx)
 
 
 double
-_rsvg_css_hand_normalize_length (const RsvgLength * in, gdouble pixels_per_inch,
+_rsvg_css_hand_normalize_length (const _RsvgLength * in, gdouble pixels_per_inch,
                                  gdouble width_or_height, gdouble font_size)
 {
     if (in->factor == '\0')

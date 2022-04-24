@@ -44,7 +44,7 @@ typedef struct _RsvgNodeImage RsvgNodeImage;
 struct _RsvgNodeImage {
     RsvgNode super;
     gint preserve_aspect_ratio;
-    RsvgLength x, y, w, h;
+    _RsvgLength x, y, w, h;
     cairo_surface_t *surface; /* a cairo image surface */
 };
 

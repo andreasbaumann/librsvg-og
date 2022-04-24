@@ -68,13 +68,13 @@ struct _RsvgNodeSymbol {
 struct _RsvgNodeUse {
     RsvgNode super;
     char *link;
-    RsvgLength x, y, w, h;
+    _RsvgLength x, y, w, h;
 };
 
 struct _RsvgNodeSvg {
     RsvgNode super;
     gint preserve_aspect_ratio;
-    RsvgLength x, y, w, h;
+    _RsvgLength x, y, w, h;
     RsvgViewBox vbox;
     RsvgPropertyBag *atts;
 };

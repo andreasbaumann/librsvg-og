@@ -94,7 +94,7 @@ typedef struct _RsvgFilterPrimitive RsvgFilterPrimitive;
  */
 struct _RsvgFilterPrimitive {
     RsvgNode super;
-    RsvgLength x, y, width, height;
+    _RsvgLength x, y, width, height;
     GString *in;
     GString *result;
 
@@ -1976,7 +1976,7 @@ typedef struct _RsvgFilterPrimitiveOffset RsvgFilterPrimitiveOffset;
 
 struct _RsvgFilterPrimitiveOffset {
     RsvgFilterPrimitive super;
-    RsvgLength dx, dy;
+    _RsvgLength dx, dy;
 };
 
 static void
@@ -4334,7 +4334,7 @@ struct _RsvgNodeLightSource {
     lightType type;
     gdouble azimuth;
     gdouble elevation;
-    RsvgLength x, y, z, pointsAtX, pointsAtY, pointsAtZ;
+    _RsvgLength x, y, z, pointsAtX, pointsAtY, pointsAtZ;
     gdouble specularExponent;
     gdouble limitingconeAngle;
 };

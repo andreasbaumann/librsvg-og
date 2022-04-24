@@ -247,7 +247,7 @@ rsvg_new_polyline (void)
 
 struct _RsvgNodeLine {
     RsvgNode super;
-    RsvgLength x1, x2, y1, y2;
+    _RsvgLength x1, x2, y1, y2;
 };
 
 typedef struct _RsvgNodeLine RsvgNodeLine;
@@ -318,7 +318,7 @@ rsvg_new_line (void)
 
 struct _RsvgNodeRect {
     RsvgNode super;
-    RsvgLength x, y, w, h, rx, ry;
+    _RsvgLength x, y, w, h, rx, ry;
     gboolean got_rx, got_ry;
 };
 
@@ -516,7 +516,7 @@ rsvg_new_rect (void)
 
 struct _RsvgNodeCircle {
     RsvgNode super;
-    RsvgLength cx, cy, r;
+    _RsvgLength cx, cy, r;
 };
 
 typedef struct _RsvgNodeCircle RsvgNodeCircle;
@@ -609,7 +609,7 @@ rsvg_new_circle (void)
 
 struct _RsvgNodeEllipse {
     RsvgNode super;
-    RsvgLength cx, cy, rx, ry;
+    _RsvgLength cx, cy, rx, ry;
 };
 
 typedef struct _RsvgNodeEllipse RsvgNodeEllipse;

@@ -160,7 +160,7 @@ rsvg_stop_set_atts (RsvgNode * self, RsvgHandle * ctx, RsvgPropertyBag * atts)
     if (rsvg_property_bag_size (atts)) {
         if ((value = rsvg_property_bag_lookup (atts, "offset"))) {
             /* either a number [0,1] or a percentage */
-            RsvgLength length = _rsvg_css_parse_length (value);
+            _RsvgLength length = _rsvg_css_parse_length (value);
             offset = _rsvg_css_hand_normalize_length (&length, rsvg_dpi_percentage (ctx), 1., 0.);
 
             if (offset < 0.)

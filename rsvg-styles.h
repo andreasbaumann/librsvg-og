@@ -67,7 +67,7 @@ typedef enum {
 typedef struct _RsvgVpathDash RsvgVpathDash;
 
 struct _RsvgVpathDash {
-    RsvgLength offset;
+    _RsvgLength offset;
     int n_dash;
     double *dash;
 };
@@ -102,7 +102,7 @@ struct _RsvgState {
     gboolean has_stroke_server;
     guint8 stroke_opacity;      /* 0..255 */
     gboolean has_stroke_opacity;
-    RsvgLength stroke_width;
+    _RsvgLength stroke_width;
     gboolean has_stroke_width;
     double miter_limit;
     gboolean has_miter_limit;
@@ -112,7 +112,7 @@ struct _RsvgState {
     cairo_line_join_t join;
     gboolean has_join;
 
-    RsvgLength font_size;
+    _RsvgLength font_size;
     gboolean has_font_size;
     char *font_family;
     gboolean has_font_family;
@@ -136,7 +136,7 @@ struct _RsvgState {
     gboolean has_unicode_bidi;
     TextAnchor text_anchor;
     gboolean has_text_anchor;
-    RsvgLength letter_spacing;
+    _RsvgLength letter_spacing;
     gboolean has_letter_spacing;
 
     guint text_offset;

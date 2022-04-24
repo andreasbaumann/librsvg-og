@@ -40,7 +40,7 @@ typedef struct _RsvgNodeText RsvgNodeText;
 
 struct _RsvgNodeText {
     RsvgNode super;
-    RsvgLength x, y, dx, dy;
+    _RsvgLength x, y, dx, dy;
 };
 
 typedef struct _RsvgNodeTref RsvgNodeTref;

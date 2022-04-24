@@ -41,7 +41,7 @@ typedef struct _RsvgMask RsvgMask;
 
 struct _RsvgMask {
     RsvgNode super;
-    RsvgLength x, y, width, height;
+    _RsvgLength x, y, width, height;
     RsvgMaskUnits maskunits;
     RsvgMaskUnits contentunits;
 };
