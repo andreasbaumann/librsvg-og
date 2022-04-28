@@ -283,8 +283,9 @@ gboolean rsvg_handle_render_document (RsvgHandle           *handle,
                                       const RsvgRectangle  *viewport,
                                       GError              **error)
 {
-  fprintf( stderr, "Unimplemented function '%s' called!\n", "rsvg_handle_render_document" );
-}                                      
+    g_set_error (error, rsvg_error_quark(), RSVG_ERROR_FAILED, "Unimplemented function '%s' called!\n", "rsvg_handle_render_document");
+    return FALSE;
+}
 
 gboolean rsvg_handle_get_geometry_for_layer (RsvgHandle     *handle,
                                              const char     *id,
@@ -293,8 +294,9 @@ gboolean rsvg_handle_get_geometry_for_layer (RsvgHandle     *handle,
                                              RsvgRectangle  *out_logical_rect,
                                              GError        **error)
 {
-  fprintf( stderr, "Unimplemented function '%s' called!\n", "rsvg_handle_get_geometry_for_layer" );
-}                                             
+    g_set_error (error, rsvg_error_quark(), RSVG_ERROR_FAILED, "Unimplemented function '%s' called!\n", "rsvg_handle_get_geometry_for_layer");
+    return FALSE;
+}
 
 gboolean rsvg_handle_render_layer (RsvgHandle           *handle,
                                    cairo_t              *cr,
@@ -302,8 +304,9 @@ gboolean rsvg_handle_render_layer (RsvgHandle           *handle,
                                    const RsvgRectangle  *viewport,
                                    GError              **error)
 {
-  fprintf( stderr, "Unimplemented function '%s' called!\n", "rsvg_handle_render_layer" );
-}                                   
+    g_set_error (error, rsvg_error_quark(), RSVG_ERROR_FAILED, "Unimplemented function '%s' called!\n", "rsvg_handle_render_layer");
+    return FALSE;
+}
 
 gboolean rsvg_handle_render_element (RsvgHandle           *handle,
                                      cairo_t              *cr,
@@ -311,7 +314,8 @@ gboolean rsvg_handle_render_element (RsvgHandle           *handle,
                                      const RsvgRectangle  *element_viewport,
                                      GError              **error)
 {
-  fprintf( stderr, "Unimplemented function '%s' called!\n", "rsvg_handle_render_element" );
+    g_set_error (error, rsvg_error_quark(), RSVG_ERROR_FAILED, "Unimplemented function '%s' called!\n", "rsvg_handle_render_element");
+    return FALSE;
 }
 
 gboolean rsvg_handle_get_geometry_for_element (RsvgHandle     *handle,
@@ -320,5 +324,6 @@ gboolean rsvg_handle_get_geometry_for_element (RsvgHandle     *handle,
                                                RsvgRectangle  *out_logical_rect,
                                                GError        **error)
 {
-  fprintf( stderr, "Unimplemented function '%s' called!\n", "rsvg_handle_get_geometry_for_element" );
+    g_set_error (error, rsvg_error_quark(), RSVG_ERROR_FAILED, "Unimplemented function '%s' called!\n", "rsvg_handle_get_geometry_for_element");
+    return FALSE;
 }

@@ -127,12 +127,13 @@ void rsvg_handle_get_intrinsic_dimensions (RsvgHandle *handle,
                                            gboolean   *out_has_viewbox,
                                            RsvgRectangle *out_viewbox)
 {
-  fprintf( stderr, "Unimplemented function '%s' called!\n", "rsvg_handle_get_intrinsic_dimensions" );
+    fprintf( stderr, "Unimplemented function '%s' called!\n", "rsvg_handle_get_intrinsic_dimensions" );
 }
 
 gboolean rsvg_handle_get_intrinsic_size_in_pixels (RsvgHandle *handle,
                                                    gdouble    *out_width,
                                                    gdouble    *out_height)
 {
-  fprintf( stderr, "Unimplemented function '%s' called!\n", "rsvg_handle_get_intrinsic_size_in_pixels" );
+    fprintf( stderr, "Unimplemented function '%s' called!\n", "rsvg_handle_get_intrinsic_size_in_pixels" );
+    return FALSE;
 }
