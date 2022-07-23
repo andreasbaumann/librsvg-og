@@ -231,6 +231,11 @@ RsvgHandle *rsvg_handle_new_from_stream_sync (GInputStream   *input_stream,
 RsvgHandle *rsvg_handle_new_from_data (const guint8 * data, gsize data_len, GError ** error);
 RsvgHandle *rsvg_handle_new_from_file (const gchar * file_name, GError ** error);
 
+gboolean rsvg_handle_set_stylesheet (RsvgHandle   *handle,
+                                     const guint8 *css,
+                                     gsize         css_len,
+                                     GError      **error);
+
 void rsvg_handle_internal_set_testing (RsvgHandle *handle, gboolean testing);
 
 /* BEGIN deprecated APIs. Do not use! */

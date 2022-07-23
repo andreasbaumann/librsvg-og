@@ -140,3 +140,11 @@ gboolean rsvg_handle_get_intrinsic_size_in_pixels (RsvgHandle *handle,
     *out_height = 0.0;
     return FALSE;
 }
+
+gboolean rsvg_handle_set_stylesheet (RsvgHandle   *handle,
+                                     const guint8 *css,
+                                     gsize         css_len,
+                                     GError      **error)
+{
+    return FALSE;
+}
