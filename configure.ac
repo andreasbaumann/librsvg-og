@@ -93,8 +93,12 @@ AM_CONDITIONAL(OS_WIN32, test "$native_win32" = "yes")
 
 dnl ===========================================================================
 
+AC_MSG_CHECKING([for glib-mkenums script])
 GLIB_MKENUMS=`$PKG_CONFIG --variable=glib_mkenums glib-2.0`
-AC_SUBST(GLIB_MKENUMS)
+AS_IF([test "x$GLIB_MKENUMS" = "x"],
+	[AC_MSG_ERROR([glib-mkenums not listed in glib-2.0 pkg-config file])],
+	[AC_SUBST([GLIB_MKENUMS])
+	AC_MSG_RESULT([$GLIB_MKENUMS])])
 
 PKG_CHECK_MODULES(LIBRSVG, \
 	gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED \
